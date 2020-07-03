@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-01 21:50:36
- * @LastEditTime: 2020-07-02 22:05:09
+ * @LastEditTime: 2020-07-03 23:09:05
  * @LastEditors: Please set LastEditors
  * @Description: 移动web适配方案笔记
  * @FilePath: \移动web\MobileWeb\day1\jdM\demo\03-适配方案.html
@@ -10,7 +10,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"> -->
     <title>Title</title>
     <style>
         body{
@@ -34,24 +35,32 @@
             3.不允许用户自行缩放网页
             满足这些要求达到了适配，国际上通用的适配方案，标准的
             移动端适配方案。
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        适配设置：
+            如果任何设置都没有，默认走的就是viewport的默认设置
+            去设置新的viewport设置，达到适配要求。
+            <meta name="viewport">设置视口的标签 在head里面
+            并且应该紧接着编码设置
+            viewport的功能：
+            1.width     可以设置宽度    （device-width  当前设备
+            的宽度）
+            2.height    可以设置高度
+            3.initial-scale     可以设置默认的缩放比例
+            4.user-scalable     可以设置是否允许用户自行缩放
+            5.maximum-scale     可以设置最大缩放比例
+            6.minimum-scale     可以设置最小缩放比例
+            在<meta name="viewport" content=""> content=""
+            使用以上参数
+            1.width=device-width    宽度跟浏览器（当前设备）保持一致
+            2.initial-scale=1.0     宽度一致（跟pc端）比例是1.0
+            3.user-scalable=no      不允许用户自行缩放（yes，
+            no  1，0）
+            标准适配方案：
+            <meta name="viewport" content="width=device-width,
+            initial-scale=1.0,user-scalable=0">
+            meta:vp + tab 快捷方式        
          */
     </style>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0"> -->
 </head>
 <body>
 <div class="box">
