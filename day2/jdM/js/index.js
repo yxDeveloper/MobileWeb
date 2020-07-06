@@ -23,7 +23,12 @@ class JdShop {
         this.pointBox = this.banner.querySelector('ul:last-Child');
         // 所有的点
         this.points = this.pointBox.querySelectorAll('li');
+        /*2.倒数计时  假设 3小时*/
+        this.time = 3 * 60 * 60;
+        // 时间span
+        this.spans = document.querySelectorAll('.time span');
     }
+    // 搜索框
     search () {
         // 1.默认固定顶部透明背景
         let that = this;
@@ -32,7 +37,7 @@ class JdShop {
             // console.log(document.body.scrollTop);
             // console.log(document.documentElement.scrollTop);
             // console.log(window.pageYOffset);
-            let scrollTop = document.documentElement.scrollTop;
+            let scrollTop = document.body.scrollTop;
             // console.log(scrollTop);
             // 默认的透明度
             let opacity = 0;
@@ -49,6 +54,7 @@ class JdShop {
             that.searchBox.style.background = `rgba(201,21,35,${opacity})`;
         }
     }
+    // 轮播图
     jdBanner () {
         // 1.自动轮播图且无缝   定时器，过渡
         // 2.点要随着图片的轮播改变 根据索引切换
@@ -182,11 +188,29 @@ class JdShop {
         this.imageBox.style.transform = `translateX(${translateX}px)`;
         this.imageBox.style.webkitTransform = `translateX(${translateX}px)`;
     }
-    
-
-
+    // 倒计时功能模块
     downTime () {
+        // 1.每一秒改变当前的时间
+        // 2.倒计时 假设   4小时
+        let timer = setInterval(() => {
+            this.time--;
+            // 格式化   给不同的元素html内容
+            let h = Math.floor(this.time / 3600);
+            let m = Math.floor(this.time % 3600 / 60);
+            let s = Math.floor(this.time % 60);
 
+            this.spans[0].innerHTML = Math.floor(h/10);
+            this.spans[1].innerHTML = h%10;
+            this.spans[3].innerHTML = Math.floor(m/10);
+            this.spans[4].innerHTML = m%10;
+            this.spans[6].innerHTML = Math.floor(s/10);
+            this.spans[7].innerHTML = s%10;
+
+            if(this.time <= 0) {
+                clearInterval(timer);
+            }
+
+        },1000)
     }
 
 }
