@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-08 23:54:46
+ * @LastEditTime: 2020-07-16 01:50:59
+ * @LastEditors: Please set LastEditors
+ * @Description: 栅格系统
+ * @FilePath: \移动web\MobileWeb\day3\weijinsuo\demo\05-栅格系统.html
+--> 
 <!--h5文档申明-->
 <!DOCTYPE html>
 <!--文档语言申明  en zh-CN zh-tw -->
@@ -51,10 +59,11 @@
         <!--
             col：列样式
             第一个*：屏幕的大小
+            大屏设备     xl   超大屏设备以上生效包含本身
             大屏设备     lg   大屏设备以上生效包含本身
             中屏设备     md   中屏设备以上生效包含本身
             小屏设备     sm   小屏设备以上生效包含本身
-            超小屏设备   xs   超小屏设备以上生效包含本身
+            超小屏设备   xs   超小屏设备以下生效包含本身
             第二个*：每一行的分等份，默认分成12等份 ，数字代表的是占多少份
         -->
         <div class="col-xs-4"></div>
@@ -62,6 +71,7 @@
         <div class="col-xs-4"></div>
     </div>
 </div>
+<!-- row>col-lg-3 -->
 <!-- bootstrap依赖jquery-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="../lib/jquery/jquery.min.js"></script>
