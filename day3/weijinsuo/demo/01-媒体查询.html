@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-08 23:54:46
- * @LastEditTime: 2020-07-15 23:55:40
+ * @LastEditTime: 2020-07-16 00:24:25
  * @LastEditors: Please set LastEditors
  * @Description: 媒体查询
  * @FilePath: \移动web\MobileWeb\day3\weijinsuo\demo\01-媒体查询.html
@@ -28,16 +28,44 @@
        /* @media screen and(max-width: 768px) and (min-width: 320px){} */
        /* @media screen and (max-width: 768px) and (min-width: 320px){} */
        
-       @media screen and (max-width: width 768px;) {
-            /* 1.在超小屏设备的时候 768px以下   当前容器的宽度 */
-       }
-       
+       @media screen and (max-width: width 768px) {
+            /*1. 在超小屏设备的时候 768px以下      当前容器的宽度100%  背景蓝色*/
+            .container{
+                width: 100%;
+                background-color:blue #0080ff;
+            }
+        }
+        @media screen and (max-width: 992px) and (min-width: 768px) {
+            /*2. 在小屏设备的时候   768px-992px    当前容器的宽度750px 背景绿色*/
+            .container{
+                width: 750px;
+                background-color: green;
+            }
+        }
+        @media screen and (max-width: 1200px) and (min-width: 992px) {
+            /*3. 在中屏设备的时候   992px-1200px   当前容器的宽度970px     背景红色*/
+            .container{
+                width: 970px;
+                background-color: red;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            /*4. 在大屏设备的时候   1200px以上      当前容器的宽度1170px   背景黄色*/
+            .container{
+                width: 1170px;
+                background-color: yellow;
+            }
+        }
+
     </style>
 </head>
 <body>
 <!-- 
     响应式容器：
-    1、在超小屏设备的时候 768px以下
+    1、在超小屏设备的时候 屏幕<768px 网页自适应
+    2、在小屏设备的时候 992px>屏幕>768px 网页750px
+    3、在中屏设备的时候 1200px>屏幕>992px 网页970px
+    3、在大屏设备的时候 1200px<屏幕 网页1170px
  -->
 <div class="container"></div>
 </body>
