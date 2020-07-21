@@ -178,7 +178,9 @@
 <footer class="wjs_partner"></footer>
 <!--使用模版引擎-->
 <script type="text/template" id="pointTemplate">
-    
+    <% for(var i = 0; i < list.length; i++) { %>
+		<li data-target="##carousel-example-generic" data-slide-to="<%=i%>" class="<%=i==0?active:''%>"></li>
+	<% } %>
 </script>
 <script type="text/template" id="imageTemplate">
     
