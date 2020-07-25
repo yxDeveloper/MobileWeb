@@ -57,8 +57,66 @@ a:hover{
 	font-size: 12px;
 	color: #666;
 }
+.wjs_topBar > .container{}
+.wjs_topBar > .container > .row{}
+/*.wjs_topBar > .container > .row > div{
+    height: 40px;
+    border-left: 1px solid #ccc;
+}
+.wjs_topBar > .container > .row > div:first-child{
+    border-left: none;
+}*/
+/* +,~选择器		+紧邻的下一个兄弟元素	~后面所有的兄弟元素 */
+.wjs_topBar > .container > .row > div{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+.wjs_topBar > .container > .row > div ~ div{
+	border-left: 1px solid #ccc;
+}
 
+.wjs_topBar .btn-register{
+	border: none;
+	background: #E92322;
+	color: #fff;
+	font-size: 12px;
+	padding: 3px 12px;
+}
+.wjs_topBar .btn-register:hover{
+	font-size: 12px;
+	color: #666;
+}
+.wjs_topBar .btn-login {
+	font-size: 12px;
+	color: #666;
+}
+.wjs_topBar .btn-login:hover{
+	text-decoration: none;
+	color: #666;
+}
 
+.wjs_app{
+	display: block;
+}
+.wjs_app img{
+	display: none;
+}
+.wjs_app:hover img{
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -60px;
+	border: 1px solid #ccc;
+	border-top: none;
+	top: 40px;
+	z-index: 1000;
+}
 
-
-
+/* 导航条 */
+/* 1.拷贝源码的模块样式：准确定位到所有元素的选择器并且能保证优先级比
+源码高*/
+/* 2.针对功能进行覆盖：更改模块名称 */
+/* 3.但是有一些没有用到的选择器	代码的 */
+/* 4.删除：降低代码量 */
+/* 5.保留：利于维护，方便产品更新的时候不用再去修改代码 */
