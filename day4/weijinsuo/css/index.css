@@ -117,7 +117,7 @@ a:hover{
 /* 1.拷贝源码的模块样式：准确定位到所有元素的选择器并且能保证优先级比
 源码高*/
 /* 2.针对功能进行覆盖：更改模块名称 */
-/* 3.但是有一些没有用到的选择器	代码的 */
+/* 3.但是有一些没有用到的选择器	代码的冗（rong）余 */
 /* 4.删除：降低代码量 */
 /* 5.保留：利于维护，方便产品更新的时候不用再去修改代码 */
 .wjs_nav {
@@ -233,4 +233,28 @@ fieldset[disabled] .wjs_nav .btn-link:hover,
 .wjs_nav .btn-link[disabled]:focus,
 fieldset[disabled] .wjs_nav .btn-link:focus {
     color: #ccc;
+}
+
+/* 轮播图 */
+.wjs_banner .pc_imgBox{
+	display: block;
+	height: 400px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.wjs_banner .m_imgBox{
+	display: block;
+	width: 100%;
+}
+.wjs_banner .m_imgBox img{
+	display: block;
+	width: 100%;
+}
+
+/* 信息 */
+.wjs_info{
+	border-bottom: 1px solid #ccc;
+	padding: 15px 0;
 }
