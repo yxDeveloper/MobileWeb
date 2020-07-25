@@ -2,7 +2,7 @@ $(function () {
 	// 动态轮播图
 	banner()
 })
-let banner = () => {
+let banner = function() {
 	// 1.获取轮播图数据
 	// 2.根据数据动态渲染	根据当前设备		屏幕宽度判断
 	// 2.1	准备数据
@@ -42,6 +42,7 @@ let banner = () => {
 	let render = () => {
 		getData(data => {
 			// 2.根据数据动态渲染 根据当前设备 屏幕宽度判断
+			let isMobile = $(window).width() < 768 ? true : false;
 			//console.log(isMobile);
 			// 2.1 准备数据
 			// 2.2 把数据转换成html格式的字符串
@@ -51,20 +52,47 @@ let banner = () => {
 			/*<% console.log(list); %> 模版引擎内不可使用外部变量 */
 			let pointHtml = template('pointTemplate',{list:data});
 			//console.log(pointHtml);
-			let imageHtml = template('imageTemplate',{list:data,isMobile:isMobile});
+			let imageHtml = template('imageTemplate',{list:data,isMobile: isMobile});
 			//console.log(imageHtml);
 			// 2.3 把字符渲染到页面中
 			$('.carousel-indicators').html(pointHtml);
 			$('.carousel-inner').html(imageHtml);
 		});
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+	// 3.测试功能 页面尺寸发生改变事件
+	$(window).on('resize',() => {
+		render();
+		// 通过js主动触发某个事件
+	}).trigger('resize');
+	// 4.移动端手势切换
+	let startX = 0
+	let distanceX = 0
+	let isMove = false
+	// originalEvent 代表js原生事件
+	$('.wjs_banner').on('touchstart',e => {
+		startX = e.originalEvent.touches[0].clientX
+	}).on('touchmove',e => {
+		let moveX = e.originalEvent.touches[0].clientX
+		distanceX = moveX - startX
+		isMove = true
+	}).on('touchend',e => {
+		// 距离足够 50px 一定要滑动过
+		if(isMove && Math.abs(distanceX) > 50) {
+			// 手势
+			// 左滑手势
+			if(distanceX < 0) {
+				// console.log('next');
+				$('.carousel').carousel('next');
+			}
+			// 右滑手势
+			else {
+				// console.log('prev');
+				$('.carousel').carousel('prev');
+			}
+		}
+		startX = 0
+		distanceX = 0
+		isMove = false
+	});
 	
 }
