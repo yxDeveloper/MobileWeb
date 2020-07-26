@@ -98,31 +98,4 @@ var banner = function () {
         isMove = false;
     });
 }
-var initMobileTab = function () {
-    /*1.解决换行问题*/
-    var $navTabs = $('.wjs_product .nav-tabs');
-    var width = 0;
-    $navTabs.find('li').each(function (i, item) {
-        var $currLi = $(this);//$(item);
-        /*
-        * width()  内容
-        * innerWidth() 内容+内边距
-        * outerWidth() 内容+内边距+边框
-        * outerWidth(true) 内容+内边距+边框+外边距
-        * */
-        var liWidth = $currLi.outerWidth(true);
-        width += liWidth;
-    });
-    console.log(width);
-    $navTabs.width(width);
 
-    /*2.修改结构使之区域滑动的结构*/
-    //加一个父容器给 .nav-tabs 叫  .nav-tabs-parent
-
-    /*3.自己实现滑动效果 或者 使用iscroll */
-    new IScroll($('.nav-tabs-parent')[0],{
-        scrollX:true,
-        scrollY:false,
-        click:true
-    });
-}
