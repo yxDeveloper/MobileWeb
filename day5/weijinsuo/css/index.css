@@ -703,3 +703,19 @@ p:first-child
 }
 
 /* 合作伙伴 */
+.wjs_partner{
+	padding: 50px 0;
+}
+.wjs_partner ul{
+	list-style: none;
+	text-align: center;
+	padding: 0;
+}
+.wjs_partner ul li{
+	display: inline-block;
+}
+.wjs_partner ul li a{
+	font-size: 70px;
+	padding: 0 15px;
+	display: block;
+}
