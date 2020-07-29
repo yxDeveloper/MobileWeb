@@ -390,9 +390,10 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
 .wjs_product .nav-tabs > li > a:hover {
 	background: #F5F5F5;
 }
-.wjs_product .nav-tabs > li > a,
-.wjs_product .nav-tabs > li > a:hover,
-.wjs_product .nav-tabs > li > a:focus {
+/* debug li.active active条件的才下边框为红 */
+.wjs_product .nav-tabs > li.active > a,
+.wjs_product .nav-tabs > li.active > a:hover,
+.wjs_product .nav-tabs > li.active > a:focus {
 	color: #555;
 	cursor: default;
 	background-color: #F5F5F5;
