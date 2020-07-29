@@ -160,7 +160,7 @@ a:hover{
     border: 1px solid #ccc;
     border-top: none;
     top:40px;
-    z-index: 100000;
+    z-index: 10;
 }
 
 /*导航条*/
@@ -174,7 +174,7 @@ a:hover{
     border: none;
     border-bottom: 1px solid #ccc;
     /*固定导航样式*/
-    z-index: 999999;
+    z-index: 9;
     background: #fff;
     width: 100%;
     border-radius: 0;
