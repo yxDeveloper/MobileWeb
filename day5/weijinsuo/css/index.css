@@ -453,8 +453,10 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
 	color: #666;
 }
 .product_box:hover{
-	
+	color: #666;
 }
 .product_box.active{
-	
+	background: #E92322;
+	color: #FFF;
+	position: relative;
 }
