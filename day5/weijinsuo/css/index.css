@@ -628,3 +628,78 @@ p:first-child
 	color: #fff;
 	font-size: 30px;
 }
+/* 1.在小屏设备 间距固定 没有虚线 */
+@media (min-width: 768px) and (max-width: 992px) {
+	.wjs_news .nav-tabs > li > a{
+		margin: 30px 50px;
+	}
+}
+/* 2.超小屏设备  间距自适应  没有虚线 */
+@media (max-width: 768px) {
+	.wjs_news .nav-tabs > li{
+		width: 25%;
+	}
+	.wjs_news .nav-tabs > li > a{
+		margin: 30px auto;
+	}
+}
+.wjs_news .nav-tabs > li:last-child > a{
+	margin-bottom: 0;
+}
+.wjs_news .nav-tabs > li > a:hover {
+}
+.wjs_news .nav-tabs > li.active > a,
+.wjs_news .nav-tabs > li.active > a:hover,
+.wjs_news .nav-tabs > li.active > a:focus {
+	color: #fff;
+	cursor: default;
+	background-color: #e92322;
+	border: none;
+	border-bottom-color: transparent;
+}
+.wjs_news .nav-tabs.nav-justified{
+	width: 100%;
+	border-bottom: 0;
+}
+.wjs_news .nav-tabs.nav-justified > li{
+	float: none;
+}
+.wjs_news .nav-tabs.nav-justified > li > a{
+	margin-bottom: 5px;
+	text-align: center;
+}
+.wjs_news .nav-tabs.nav-justified > .dropdown .dropdown-menu{
+	top: auto;
+	left: auto;
+}
+@media (min-width: 768px) {
+	.wjs_news .nav-tabs.nav-justified > li {
+		display: table-cell;
+		width: 1%;
+	}
+	.wjs_news .nav-tabs.nav-justified > li > a {
+		margin-bottom: 0;
+	}
+}
+.wjs_news .nav-tabs.nav-justified > li > a {
+	margin-right: 0;
+	border-radius: 4px;
+}
+.wjs_news .nav-tabs.nav-justified > .active > a,
+.wjs_news .nav-tabs.nav-justified > .active > a:hover,
+.wjs_news .nav-tabs.nav-justified > .active > a:focus {
+	border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+	.wjs_news .nav-tabs.nav-justified > li > a {
+		border-bottom: 1px solid #ddd;
+		border-radius: 4px 4px 0 0;
+	}
+	.wjs_news .nav-tabs.nav-justified > .active > a,
+	.wjs_news .nav-tabs.nav-justified > .active > a:hover,
+	.wjs_news .nav-tabs.nav-justified > .active > a:focus {
+		border-bottom-color: #fff;
+	}
+}
+
+/* 合作伙伴 */
