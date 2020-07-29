@@ -531,3 +531,13 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
 	border-style: solid;
 	display: inline-block;
 }
+.product_box .pro_right .tips .red {
+	color: red;
+	border-color: red;
+}
+.product_box .pro_right .tips .green {
+	color: green;
+	border-color: green;
+}
+
+
