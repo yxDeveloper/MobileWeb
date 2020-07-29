@@ -469,3 +469,16 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
 	font-family: wjs;
 	font-size: 33px;
 }
+
+.product_box .pro_left{
+	overflow: hidden;
+}
+.product_box .pro_left h3{
+	font-size: 16px;
+	margin-top: 10px;
+}
+.product_box .pro_left div{
+	font-size: 12px;
+}
+
+/* 浮动元素优先 两栏自适应注意 */
