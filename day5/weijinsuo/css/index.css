@@ -460,3 +460,12 @@ fieldset[disabled] .wjs_nav .btn-link:focus {
 	color: #FFF;
 	position: relative;
 }
+/* :: css3规范 :伪类   :: 伪元素 */
+.product_box.active::before{
+	content: "\e915";
+	position: absolute;
+	left: 0;
+	top: -7px;
+	font-family: wjs;
+	font-size: 33px;
+}
