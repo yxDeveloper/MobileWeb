@@ -1,6 +1,6 @@
 // 便利使用的是for循环
 // less没有循环语句
-// 使用函数的迭代 死循环
+// 使用函数的迭代 死循环	递归 extract（）数组元素取值
 // 根据数组的长度去停止当前循环
 // 给函数的执行附加条件
 // 需要序号来判断	通过序号遍历	@index 1开始
@@ -11,5 +11,5 @@
 			font-size: @baseFontSize / @psdWidth * extract(@adapterDeviceList,@index);
 		}
 	}
-	.adapterMixin(@index -1);
+	.adapterMixin(@index - 1);
 }
