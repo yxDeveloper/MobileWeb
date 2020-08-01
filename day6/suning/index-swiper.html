@@ -82,9 +82,11 @@
         * 3.指示功能
         * */
         new Swiper('.swiper-container',{
-			autoplay: 1000,
-			loop: true,
-			pagination: '.swiper-pagination',
+			autoplay: 1000,	//自动播放或者时间间隔
+			loop: true,	//是否轮流1-3/3-1
+			pagination: {	//point点
+				el:'.swiper-pagination'
+			},
 			autoplayDisableOnInteraction:false
 		});
     })
