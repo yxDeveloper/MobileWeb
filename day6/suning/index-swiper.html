@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/less" href="less/index-swiper.less">
     <script src="lib/less/less.min.js"></script>
+	<script type="text/javascript">
+		less.watch();
+	</script>
 </head>
 <body>
 <!--版心-->
@@ -79,11 +82,11 @@
         * 3.指示功能
         * */
         new Swiper('.swiper-container',{
-            autoplay:1000,
-            loop:true,
-            pagination:'.swiper-pagination',
-            autoplayDisableOnInteraction:false
-        });
+			autoplay: 1000,
+			loop: true,
+			pagination: '.swiper-pagination',
+			autoplayDisableOnInteraction:false
+		});
     })
 </script>
 </body>
