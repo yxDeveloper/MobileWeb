@@ -19,7 +19,7 @@ $(function () {
 				index = 1
 				// 瞬间
 				$imageBox.css({transform:'translateX('+(-index * width)+'px)'})
-			} else (index <= 0) {
+			} else if(index <= 0) {
 				index = 8
 				//瞬间
 				$imageBox.css({transform:'translateX('+(-index * width)+'px)'})
@@ -35,16 +35,18 @@ $(function () {
 	let timer = setInterval(function () {
 		index ++
 		animationFuc()
-	},1000)
+	},2000)
 	
 	// 3.完成手势切换	android 4.0 兼容 
 	// 左滑手势	下一张
 	$banner.on('swipeLeft',function () {
+		console.log(1)
 		index ++
-		annimationFuc()
+		animationFuc()
 	})
 	// 右滑手势 上一张
 	$banner.on('swipeRight',function () {
+		console.log(1)
 		index--
 		animationFuc()
 	})
